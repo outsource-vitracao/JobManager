@@ -14,3 +14,9 @@
 Route::get('/manager/create-job', function () {
     return view('manager.createjob');
 });
+
+
+Route::get('/manager', function() {
+    return view('manager.index');
+});
+
