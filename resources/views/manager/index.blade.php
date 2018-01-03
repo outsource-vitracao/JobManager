@@ -8,22 +8,8 @@
 <div class="page-content-wrapper">
     <!-- BEGIN CONTENT BODY -->
     <div class="page-content">
-        <!-- BEGIN PAGE HEADER-->
-        <!-- BEGIN PAGE BAR -->
-        <div class="page-bar">
-            <div class="page-toolbar">
-                <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm" data-container="body" data-placement="bottom" data-original-title="Change dashboard date range">
-                    <i class="icon-calendar"></i>&nbsp;
-                    <span class="thin uppercase hidden-xs"></span>&nbsp;
-                    <i class="fa fa-angle-down"></i>
-                </div>
-            </div>
-        </div>
-        <!-- END PAGE BAR -->
-        <!-- BEGIN PAGE TITLE-->
-        <h1 class="page-title"> Trang Quản Lý</h1>
-        <!-- END PAGE TITLE-->
-        <!-- END PAGE HEADER-->
+
+        @include('manager.header')
 
         <div class="row">
             <div class="col-md-12">
@@ -63,10 +49,9 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Tên khách hàng</th>
                                         <th>Tên Job</th>
                                         <th>Số lượng</th>
-                                        <th>Style</th>
+                                        <th>Order</td>
                                         <th>Trạng thái</th>
                                         <th>Thao tác</th>
                                     </tr>
@@ -74,13 +59,13 @@
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Cao Minh Đức</td>
                                         <td> 550 Blaxlands Ridge Road, Blaxlands Ridge, NSW </td>
                                         <td> 19 </td>
-                                        <td> SE </td>
+                                        <td> <i class="fa fa-check"></i> </td>
                                         <td> <span class="label label-sm label-info"> Chờ download </span> </td>
                                         <td> 
-                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Xem chi tiết</a> 
+                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Xem chi tiết</a>
+                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Thêm vào hàng đợi</a> 
                                         </td>
                                     </tr>
                                 </tbody>
