@@ -1,6 +1,7 @@
 <!-- BEGIN PAGE HEADER-->
 <!-- BEGIN PAGE BAR -->
 <div class="page-bar">
+    <h4 class="page-breadcrumb"> Trang Quản Lý</h4>
     <div class="page-toolbar">
         <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm" data-container="body" data-placement="bottom" data-original-title="Change dashboard date range">
             <i class="icon-calendar"></i>&nbsp;
@@ -11,6 +12,6 @@
 </div>
 <!-- END PAGE BAR -->
 <!-- BEGIN PAGE TITLE-->
-<h1 class="page-title"> Trang Quản Lý</h1>
+<br />
 <!-- END PAGE TITLE-->
 <!-- END PAGE HEADER-->

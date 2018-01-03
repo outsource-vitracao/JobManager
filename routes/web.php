@@ -20,3 +20,7 @@ Route::get('/manager', function() {
     return view('manager.index');
 });
 
+Route::get('/manager/detail', function() {
+    return view('manager.detail');
+});
+
