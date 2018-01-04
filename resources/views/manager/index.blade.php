@@ -1,4 +1,3 @@
-
 @extends('manager.layout')
 
 
