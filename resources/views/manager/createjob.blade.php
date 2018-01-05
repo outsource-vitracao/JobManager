@@ -12,38 +12,41 @@
                 </div>
             </div>
             <div class="portlet-body form">
-                <form role="form">
+                <form role="form" action="{{route('create-job')}}" method="POST">
+                    {{ csrf_field() }}
                     <div class="form-body">
                         <div class="form-group">
                             <label>Tên Job:</label>
-                            <input class="form-control spinner" type="text" placeholder="Tên Job"> 
+                            <input class="form-control spinner" type="text" placeholder="Tên Job" name="name"> 
                         </div>
                     
                         <div class="form-group">
                             <label>Tên khách hàng:</label>
-                            <input class="form-control spinner" type="text" placeholder="Tên khách hàng"> 
+                            <input class="form-control spinner" type="text" placeholder="Tên khách hàng" name="client"> 
                         </div>
 
                         <div class="form-group">
                             <label>Số lượng ảnh:</label>
-                            <input class="form-control spinner" type="number" placeholder="Số lượng ảnh"> 
+                            <input class="form-control spinner" type="number" placeholder="Số lượng ảnh" name="total"> 
                         </div>
 
                         <div class="form-group">
                             <label>Style:</label>
-                            <select class="form-control">
-                                <option>Option 1</option>
+                            <select class="form-control" name="style">
+                                <option>SE and TV</option>
+                                <option>SE</option>
+                                <option>SE Extra</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label>Link Download:</label>
-                            <input class="form-control spinner" type="text" placeholder="Link Download"> 
+                            <input class="form-control spinner" type="text" placeholder="Link Download" name="linkdownload"> 
                         </div>
                         
                         <div class="form-group">
                             <label>Chú thích:</label>
-                            <textarea class="form-control" rows="3"></textarea> 
+                            <textarea class="form-control" rows="3" name="note"></textarea> 
                         </div>
                     </div>
                     <div class="form-actions">

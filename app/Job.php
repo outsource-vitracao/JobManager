@@ -10,9 +10,10 @@ class Job extends Model
     protected $table = "jobs";
 
     protected $fillable = [
-        'client',
         'name',
+        'client',
         'total',
+        'style',
         'linkdownload',
         'note',
     ];

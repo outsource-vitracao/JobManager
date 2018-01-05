@@ -20,10 +20,14 @@
                 </div>
             </li>
             <!-- END SIDEBAR TOGGLER BUTTON -->
-            <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
             <li class="nav-item">
-                <a href="#" class="nav-link nav-toggle">
+                <a href="#" class="nav-link">
                     <span class="title">Danh sách Job</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link ">
+                    <span class="title">Tạo Job mới</span>
                 </a>
             </li>
         </ul>

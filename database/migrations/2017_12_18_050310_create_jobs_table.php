@@ -15,11 +15,12 @@ class CreateJobsTable extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('client')->unique();
             $table->string('name');
+            $table->string('client');
             $table->integer('total');
-            $table->string('linkdownload');
-            $table->text('note');
+            $table->string('style');
+            $table->text('linkdownload');
+            $table->longText('note')->nullable();
             $table->timestamps();
         });
     }

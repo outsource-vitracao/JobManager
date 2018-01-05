@@ -21,17 +21,11 @@ class JobController extends Controller
         return view('job.create');
     }
 
-    public function store(Request $req){
-
-        $job = Job::create([
-            'client' =>  $req['client'],
-            'name' => $req['name'],
-            'total' => $req['total'],
-            'linkdownload' => $req['linkdownload'],
-            'note' => $reg['note']
-        ]);
-
-        return $job->id;
+    public function store(Request $request){
+        
+        $job = new Job($request->all());
+        $job->save();
+        dd($job);
     }
 
     public function show($id){
