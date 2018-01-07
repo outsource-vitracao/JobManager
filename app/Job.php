@@ -22,4 +22,7 @@ class Job extends Model
         return $this->hasMany('App/Order');
     }
 
+    public function status(){
+        return $this->hasOne('App/JobStatus');
+    }
 }
