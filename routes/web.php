@@ -29,7 +29,8 @@ Route::get('/manager', function() {
     return view('manager.index');
 });
 
-Route::get('/manager/detail', function() {
-    return view('manager.detail');
-});
+Route::get('/manager/detail/{id}', [
+    'as' => 'job-detail',
+    'uses' => 'JobController@show'
+]);
 

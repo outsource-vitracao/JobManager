@@ -30,28 +30,28 @@
                                 <div class="mt-list-container list-todo" id="accordion1" role="tablist" aria-multiselectable="true">
                                     <ul>
                                         <li class="mt-list-item">
-                                            ID: 1
+                                            ID: {{$job->id}}
                                         </li>
                                         <li class="mt-list-item">
-                                            Tên Job:
+                                            Tên Job: {{$job->name}}
                                         </li>
                                         <li class="mt-list-item">
-                                            Tên khách hàng:
+                                            Tên khách hàng: {{$job->client}}
                                         </li>
                                         <li class="mt-list-item">
-                                            Số lượng ảnh:
+                                            Số lượng ảnh: {{$job->total}}
                                         </li>
                                         <li class="mt-list-item">
-                                            Style:
+                                            Style: {{$job->style}}
                                         </li>
                                         <li class="mt-list-item">
-                                            Trạng thái:
+                                            Trạng thái: {{$job->status->status}}
                                         </li>
                                         <li class="mt-list-item">
-                                            Link download:
+                                            Link download: {{$job->linkdownload}}
                                         </li>
                                         <li class="mt-list-item">
-                                            Chú thích:
+                                            Chú thích: {{$job->note}}
                                         </li>
                                         <li class="mt-list-item">
 

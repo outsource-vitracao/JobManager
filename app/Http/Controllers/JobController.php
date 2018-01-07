@@ -32,14 +32,13 @@ class JobController extends Controller
         $jobStatus->status = 'Chờ thêm vào hàng đợi';
         $jobStatus->save();
 
-        return $job->status->id;
+        return redirect()->action('JobController@show',['id'=>$job->id]);
     }
 
     public function show($id){
 
         $job = Job::find($id);
-
-        return $job;
+        return view('manager.detail',compact('job'));
 
     }
 
