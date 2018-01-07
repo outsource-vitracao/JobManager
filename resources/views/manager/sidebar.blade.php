@@ -21,12 +21,12 @@
             </li>
             <!-- END SIDEBAR TOGGLER BUTTON -->
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('manager-index')}}" class="nav-link">
                     <span class="title">Danh sách Job</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link ">
+                <a href="{{route('create-job')}}" class="nav-link ">
                     <span class="title">Tạo Job mới</span>
                 </a>
             </li>

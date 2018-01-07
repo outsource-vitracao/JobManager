@@ -11,23 +11,30 @@
 |
 */
 
-Route::get('/manager/create-job', function () {
+Route::get('/manager/create-job', [ 
+    'as' => 'create-job',
+    'uses' => function () {
     return view('manager.createjob');
-});
+    }
+]);
 
 Route::post('/manager/create-job',[
     'as' => 'create-job',
     'uses' => 'JobController@store' 
 ]);
 
-Route::get('/manager/create-order', function () {
+Route::get('/manager/create-order',[ 
+    'as' => 'create-order',
+    'uses' => function () {
     return view('manager.createorder');
-});
+    }
+]);
 
 
-Route::get('/manager', function() {
-    return view('manager.index');
-});
+Route::get('/manager',[
+    'as' => 'manager-index',
+    'uses' => 'JobController@index'
+]);
 
 Route::get('/manager/detail/{id}', [
     'as' => 'job-detail',

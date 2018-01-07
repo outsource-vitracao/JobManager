@@ -18,9 +18,11 @@
                     <li class="active">
                         <a href="#tab_1_1" data-toggle="tab" aria-expanded="false"> Chi tiết </a>
                     </li>
+                    @if(isset($job->order->id))
                     <li class="">
                         <a href="#tab_1_2" data-toggle="tab" aria-expanded="true"> Order kèm theo </a>
                     </li>
+                    @endif
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fade active in" id="tab_1_1">

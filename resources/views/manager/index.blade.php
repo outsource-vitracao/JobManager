@@ -26,17 +26,25 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach($jobs as $job)
                             <tr>
-                                <td>1</td>
-                                <td> 550 Blaxlands Ridge Road, Blaxlands Ridge, NSW </td>
-                                <td> 19 </td>
-                                <td> <i class="fa fa-check"></i> </td>
-                                <td> <span class="label label-sm label-info"> Chờ download </span> </td>
+                                <td>{{$job->id}}</td>
+                                <td>{{$job->name}}</td>
+                                <td>{{$job->total}}</td>
+                                <td>
+                                @if(isset($job->order->id))
+                                    {{count($job->order)}}
+                                @else
+                                    0
+                                @endif
+                                </td>
+                                <td> <span class="label label-sm label-info">{{$job->status->status}}</span> </td>
                                 <td> 
-                                    <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Xem chi tiết</a>
+                                    <a href="{{route('job-detail',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Xem chi tiết</a>
                                     <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Thêm vào hàng đợi</a> 
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
