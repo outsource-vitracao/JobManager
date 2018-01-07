@@ -23,11 +23,16 @@ Route::post('/manager/create-job',[
     'uses' => 'JobController@store' 
 ]);
 
-Route::get('/manager/create-order',[ 
+Route::get('/manager/create-order/{job_id}',[ 
     'as' => 'create-order',
     'uses' => function () {
     return view('manager.createorder');
     }
+]);
+
+Route::post('/manager/create-order',[
+    'as' => 'create-order',
+    'uses' => 'OrderController@store' 
 ]);
 
 

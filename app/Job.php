@@ -21,7 +21,7 @@ class Job extends Model
     ];
 
     public function order(){
-        return $this->hasMany('App\Order');
+        return $this->hasOne('App\Order');
     }
 
     public function status(){

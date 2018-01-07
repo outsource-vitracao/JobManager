@@ -11,6 +11,7 @@
                 </div>
                 <div class="actions">
                     <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Thêm vào hàng đợi</a>
+                    <a href="{{route('create-order').'/'.$job->id}}" class="btn btn-outline btn-circle dark btn-sm black">Thêm order</a>
                 </div>
             </div>
             <div class="portlet-body">
@@ -57,10 +58,10 @@
                                         </li>
                                         <li class="mt-list-item">
 
-                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Xóa Job</a>
-                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Sửa Job</a>
-                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Up Job</a>
-                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Thêm Order</a>
+                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Xóa </a>
+                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Sửa </a>
+                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Ưu tiên</a>
+                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Up</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -72,21 +73,23 @@
                         <div class="col-lg-12">
                             <div class="mt-element-list">
                                 <div class="mt-list-container list-todo" id="accordion1" role="tablist" aria-multiselectable="true">
+                                    @if(isset($job->order->id))
                                     <ul>
                                         <li class="mt-list-item">
-                                            Style: 
+                                            Style: {{$job->order->style}}
                                         </li>
                                         <li class="mt-list-item">
-                                            Số lượng ảnh:
+                                            Số lượng ảnh: {{$job->order->total}}
                                         </li>
                                         <li class="mt-list-item">
-                                            Ghi chú:
+                                            Ghi chú: {{$job->order->note}}
                                         </li>
                                         <li class="mt-list-item">
                                             <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Xóa Order</a>
                                             <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Sửa Order</a>
                                         </li>
                                     </ul>
+                                    @endif
                                 </div>
                             </div>
                         </div>

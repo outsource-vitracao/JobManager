@@ -3,12 +3,18 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\Job;
 class Order extends Model
 {
     
     protected $table = "orders";
 
+    protected $fillable = [
+        'job_id',
+        'style',
+        'total',
+        'note'
+    ];
     public function job(){
         return $this->belongsTo('App/Job');
     }

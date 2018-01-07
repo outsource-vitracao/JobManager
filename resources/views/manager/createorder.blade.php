@@ -12,24 +12,25 @@
                 </div>
             </div>
             <div class="portlet-body form">
-                <form role="form">
+                <form role="form" action="{{route('create-order')}}" method="POST">
+                    {{ csrf_field() }}
+                    <input type="hidden" name="job_id" value="{{request()->job_id}}" >
                     <div class="form-body">
-
                         <div class="form-group">
                             <label>Số lượng ảnh:</label>
-                            <input class="form-control spinner" type="number" placeholder="Số lượng ảnh"> 
+                            <input class="form-control spinner" name="total" type="number" placeholder="Số lượng ảnh"> 
                         </div>
 
                         <div class="form-group">
                             <label>Style:</label>
-                            <select class="form-control">
-                                <option>Option 1</option>
+                            <select name="style" class="form-control">
+                                <option>Retouch</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
                             <label>Chú thích:</label>
-                            <textarea class="form-control" rows="3"></textarea> 
+                            <textarea name="note" class="form-control" rows="3"></textarea> 
                         </div>
                     </div>
                     <div class="form-actions">
