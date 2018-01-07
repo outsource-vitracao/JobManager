@@ -3,7 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\JobStatus;
 use App\Order;
+
 class Job extends Model
 {   
 
@@ -19,10 +21,10 @@ class Job extends Model
     ];
 
     public function order(){
-        return $this->hasMany('App/Order');
+        return $this->hasMany('App\Order');
     }
 
     public function status(){
-        return $this->hasOne('App/JobStatus');
+        return $this->hasOne('App\JobStatus');
     }
 }

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Job;
 
 class JobStatus extends Model
 {
@@ -36,6 +37,6 @@ class JobStatus extends Model
 
     public function job(){
         
-        return $this->belongsTo('App/Job');
+        return $this->belongsTo('App\Job');
     }
 }

@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Job as Job;
+use App\Job;
+use App\JobStatus;
 use App\Order;
 
 class JobController extends Controller
@@ -25,7 +26,13 @@ class JobController extends Controller
         
         $job = new Job($request->all());
         $job->save();
-        dd($job);
+        
+        $jobStatus = new JobStatus;
+        $jobStatus->job_id = $job->id;
+        $jobStatus->status = 'Chờ thêm vào hàng đợi';
+        $jobStatus->save();
+
+        return $job->status->id;
     }
 
     public function show($id){
