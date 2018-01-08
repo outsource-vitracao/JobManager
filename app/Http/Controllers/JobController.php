@@ -13,7 +13,6 @@ class JobController extends Controller
     public function index(){
 
         $jobs = Job::all();
-
         return view('manager.index',compact('jobs'));
     }
 
@@ -64,6 +63,26 @@ class JobController extends Controller
         $job->order->delete();
 
         return redirect()->action('JobController@index');
+    }
+
+    public function addQueue($id){
+        
+        $jobStatus = Job::find($id)->status;
+        $jobStatus->status = "Trong hàng đợi";
+        $jobStatus->save();
+        
+        return redirect()->back();
+        
+    }
+
+    public function prioritizeQueue($id){
+
+        $jobStatus = Job::find($id)->status;
+        $jobStatus->status = "Ưu tiên";
+        $jobStatus->save();
+        
+        return redirect()->back();
+
     }
 
     

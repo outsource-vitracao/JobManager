@@ -36,7 +36,7 @@ class OrderController extends Controller
     public function update(Request $request){
 
         $order = Order::find($request->id)->update($request->all());
-
+        
         return redirect()->action('JobController@show', [ 'id' => $request->job_id]);
         
     }

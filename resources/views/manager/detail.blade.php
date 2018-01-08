@@ -10,7 +10,8 @@
                     <span class="caption-subject font-purple-soft bold uppercase">Thông tin chi tiết Job</span>
                 </div>
                 <div class="actions">
-                    <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Thêm vào hàng đợi</a>
+                    <a href="{{route('add-queue',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Thêm vào hàng đợi</a>
+                    <a href="{{route('prioritize-queue',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Ưu tiên</a>
                     <a href="{{route('get-create-order',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Thêm order</a>
                 </div>
             </div>
@@ -60,7 +61,6 @@
 
                                             <a href="{{route('delete-job',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Xóa </a>
                                             <a href="{{route('get-edit-job',['id'=>$job->id])}}" class="btn btn-outline btn-circle dark btn-sm black">Sửa </a>
-                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Ưu tiên</a>
                                             <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Up</a>
                                         </li>
                                     </ul>

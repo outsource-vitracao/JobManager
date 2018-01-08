@@ -41,7 +41,8 @@
                                 <td> <span class="label label-sm label-info">{{$job->status->status}}</span> </td>
                                 <td> 
                                     <a href="{{route('job-detail',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Xem chi tiết</a>
-                                    <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Thêm vào hàng đợi</a> 
+                                    <a href="{{route('add-queue',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Thêm vào hàng đợi</a> 
+                                    <a href="{{route('prioritize-queue',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Ưu tiên</a>
                                 </td>
                             </tr>
                             @endforeach

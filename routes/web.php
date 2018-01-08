@@ -11,6 +11,8 @@
 |
 */
 
+
+// Manager
 Route::get('/manager/job/create', [ 
     'as' => 'create-job',
     'uses' => function () {
@@ -75,5 +77,22 @@ Route::get('/manager',[
 Route::get('/manager/job/detail/{id}', [
     'as' => 'job-detail',
     'uses' => 'JobController@show'
+]);
+
+Route::get('/manager/job/add-queue/{id}',[
+    'as' => 'add-queue',
+    'uses' => 'JobController@addQueue'
+]);
+
+Route::get('/manager/job/prioritize-queue/{id}',[
+    'as' => 'prioritize-queue',
+    'uses' => 'JobController@prioritizeQueue'
+]);
+
+
+//Editor
+Route::get('/editor',[
+    'as' => 'editor-index',
+    'uses' => 'JobEditController@index'
 ]);
 
