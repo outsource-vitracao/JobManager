@@ -11,17 +11,24 @@
 |
 */
 
-Route::get('/manager/create-job', [ 
+Route::get('/manager/job/create', [ 
     'as' => 'create-job',
     'uses' => function () {
     return view('manager.createjob');
     }
 ]);
 
-Route::post('/manager/create-job',[
+Route::post('/manager/job/create',[
     'as' => 'create-job',
     'uses' => 'JobController@store' 
 ]);
+
+
+Route::get('manager/job/delete/{id}', [
+    'as' => 'delete-job',
+    'uses'=> 'JobController@destroy'
+]);
+
 
 Route::get('/manager/create-order/{job_id}',[ 
     'as' => 'create-order',

@@ -69,6 +69,12 @@ class JobController extends Controller
         $job = Job::find($id);
         $job->delete();
 
+        $job->order->delete();
+
+        
+        return redirect()->action('JobController@index');
+        
+
         
     }
 

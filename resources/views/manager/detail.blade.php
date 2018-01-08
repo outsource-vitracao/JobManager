@@ -58,7 +58,7 @@
                                         </li>
                                         <li class="mt-list-item">
 
-                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Xóa </a>
+                                            <a href="{{route('delete-job',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Xóa </a>
                                             <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Sửa </a>
                                             <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Ưu tiên</a>
                                             <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Up</a>
