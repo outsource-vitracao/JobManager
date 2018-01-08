@@ -85,7 +85,7 @@
                                             Ghi chú: {{$job->order->note}}
                                         </li>
                                         <li class="mt-list-item">
-                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Xóa Order</a>
+                                            <a href="{{route('delete-order',$job->order->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Xóa Order</a>
                                             <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Sửa Order</a>
                                         </li>
                                     </ul>

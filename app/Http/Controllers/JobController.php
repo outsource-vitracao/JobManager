@@ -46,22 +46,13 @@ class JobController extends Controller
          
         $job = Job::find($id);
 
-        return view('job.edit',$job);
+        return view('manager.editjob',compact('job'));
     }
 
-    public function update(Request $req,$id){
+    public function update(Request $request){
 
-        $job = Job::find($id);
-        
-        $job = Job::update([
-            'client' =>  $req['client'],
-            'name' => $req['name'],
-            'total' => $req['total'],
-            'linkdownload' => $req['linkdownload'],
-            'note' => $reg['note']
-        ]);
-
-        return $job;
+        $job = Job::find($request->id)->update($request->all());
+        return redirect()->action('JobController@show',['id'=>$request->id]);
     }
 
     public function destroy($id){

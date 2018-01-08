@@ -15,4 +15,14 @@ class OrderController extends Controller
         return redirect()->action('JobController@show', [ 'id' => $request->job_id]);
 
     }
+
+    public function destroy($id){
+
+        $order = Order::find($id);
+        $job_id = $order->job_id;
+        $order->delete();
+
+        return redirect()->action('JobController@show', [ 'id' => $job_id]);
+        
+    }
 }

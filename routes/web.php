@@ -29,17 +29,32 @@ Route::get('manager/job/delete/{id}', [
     'uses'=> 'JobController@destroy'
 ]);
 
+Route::get('manager/job/edit/{id}',[
+    'as' => 'edit-job',
+    'uses' => 'JobController@edit'
+]);
 
-Route::get('/manager/create-order/{job_id}',[ 
+Route::post('manager/job/edit',[
+    'as' => 'edit-job',
+    'uses' => 'JobController@update'
+]);
+
+
+Route::get('/manager/order/create/{job_id}',[ 
     'as' => 'create-order',
     'uses' => function () {
     return view('manager.createorder');
     }
 ]);
 
-Route::post('/manager/create-order',[
+Route::post('/manager/order/create',[
     'as' => 'create-order',
     'uses' => 'OrderController@store' 
+]);
+
+Route::get('/manager/order/delete/{id}',[
+    'as' => 'delete-order',
+    'uses' => 'OrderController@destroy'
 ]);
 
 
@@ -48,7 +63,7 @@ Route::get('/manager',[
     'uses' => 'JobController@index'
 ]);
 
-Route::get('/manager/detail/{id}', [
+Route::get('/manager/job/detail/{id}', [
     'as' => 'job-detail',
     'uses' => 'JobController@show'
 ]);
