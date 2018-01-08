@@ -11,7 +11,7 @@
                 </div>
                 <div class="actions">
                     <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Thêm vào hàng đợi</a>
-                    <a href="{{route('create-order').'/'.$job->id}}" class="btn btn-outline btn-circle dark btn-sm black">Thêm order</a>
+                    <a href="{{route('get-create-order',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Thêm order</a>
                 </div>
             </div>
             <div class="portlet-body">
@@ -59,7 +59,7 @@
                                         <li class="mt-list-item">
 
                                             <a href="{{route('delete-job',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Xóa </a>
-                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Sửa </a>
+                                            <a href="{{route('get-edit-job',['id'=>$job->id])}}" class="btn btn-outline btn-circle dark btn-sm black">Sửa </a>
                                             <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Ưu tiên</a>
                                             <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Up</a>
                                         </li>
@@ -86,7 +86,7 @@
                                         </li>
                                         <li class="mt-list-item">
                                             <a href="{{route('delete-order',$job->order->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Xóa Order</a>
-                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Sửa Order</a>
+                                            <a href="{{route('get-edit-order',$job->order->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Sửa Order</a>
                                         </li>
                                     </ul>
                                     @endif

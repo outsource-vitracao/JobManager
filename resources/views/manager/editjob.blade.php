@@ -48,13 +48,13 @@
                         
                         <div class="form-group">
                             <label>Chú thích:</label>
-                            <textarea class="form-control" rows="3" name="note" value="{{$job->note}}"></textarea> 
+                            <textarea class="form-control" rows="3" name="note" >{{$job->note}}</textarea> 
                         </div>
                     </div>
                     <div class="form-actions">
                         <button type="submit" class="btn blue">Sửa</button>
                         <button type="reset" class="btn green">Reset</button>
-                        <button type="button" class="btn default">Thoát</button>
+                        <a href="{{url()->previous()}}" class="btn default">Thoát</a>
                     </div>
                 </form>
             </div>

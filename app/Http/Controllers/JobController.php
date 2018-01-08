@@ -38,8 +38,8 @@ class JobController extends Controller
     public function show($id){
 
         $job = Job::find($id);
-        return view('manager.detail',compact('job'));
 
+        return view('manager.detail',compact('job'));
     }
 
     public function edit($id){
@@ -52,6 +52,7 @@ class JobController extends Controller
     public function update(Request $request){
 
         $job = Job::find($request->id)->update($request->all());
+
         return redirect()->action('JobController@show',['id'=>$request->id]);
     }
 
@@ -62,11 +63,7 @@ class JobController extends Controller
 
         $job->order->delete();
 
-        
         return redirect()->action('JobController@index');
-        
-
-        
     }
 
     

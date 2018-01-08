@@ -52,7 +52,7 @@
                     <div class="form-actions">
                         <button type="submit" class="btn blue">Tạo Job</button>
                         <button type="reset" class="btn green">Reset</button>
-                        <button type="button" class="btn default">Cancel</button>
+                        <a href="{{url()->previous()}}" class="btn default">Thoát</a>
                     </div>
                 </form>
             </div>

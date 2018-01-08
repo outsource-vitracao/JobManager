@@ -25,4 +25,19 @@ class OrderController extends Controller
         return redirect()->action('JobController@show', [ 'id' => $job_id]);
         
     }
+
+    public function edit($id){
+
+        $order = Order::find($id);
+        return view('manager.editorder',compact('order'));
+
+    }
+
+    public function update(Request $request){
+
+        $order = Order::find($request->id)->update($request->all());
+
+        return redirect()->action('JobController@show', [ 'id' => $request->job_id]);
+        
+    }
 }

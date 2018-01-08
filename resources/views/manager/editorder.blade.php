@@ -12,29 +12,31 @@
                 </div>
             </div>
             <div class="portlet-body form">
-                <form role="form" action="{{route('create-order')}}" method="POST">
+                <form role="form" action="{{route('edit-order')}}" method="POST">
                     {{ csrf_field() }}
-                    <input type="hidden" name="job_id" value="{{request()->job_id}}" >
+                    <input type="hidden" name="job_id" value="{{$order->job_id}}" >
+                    <input type="hidden" name="id" value="{{$order->id}}" >
                     <div class="form-body">
                         <div class="form-group">
                             <label>Số lượng ảnh:</label>
-                            <input class="form-control spinner" name="total" type="number" placeholder="Số lượng ảnh"> 
+                            <input class="form-control spinner" name="total" type="number" placeholder="Số lượng ảnh" value="{{$order->total}}"> 
                         </div>
 
                         <div class="form-group">
                             <label>Style:</label>
                             <select name="style" class="form-control">
+                                <option selected>{{$order->style}}</option>
                                 <option>Retouch</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
                             <label>Chú thích:</label>
-                            <textarea name="note" class="form-control" rows="3"></textarea> 
+                            <textarea name="note" class="form-control" rows="3">{{$order->note}}</textarea> 
                         </div>
                     </div>
                     <div class="form-actions">
-                        <button type="submit" class="btn blue">Tạo Order</button>
+                        <button type="submit" class="btn blue">Sửa</button>
                         <button type="reset" class="btn green">Reset</button>
                         <a href="{{url()->previous()}}" class="btn default">Thoát</a>
                     </div>
