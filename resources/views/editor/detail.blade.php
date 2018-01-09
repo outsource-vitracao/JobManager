@@ -10,9 +10,7 @@
                     <span class="caption-subject font-purple-soft bold uppercase">Thông tin chi tiết Job</span>
                 </div>
                 <div class="actions">
-                    <a href="{{route('add-queue',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Thêm vào hàng đợi</a>
-                    <a href="{{route('prioritize-queue',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Ưu tiên</a>
-                    <a href="{{route('get-create-order',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Thêm order</a>
+                    <a href="{{route('finish-job',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Hoàn thành</a>
                 </div>
             </div>
             <div class="portlet-body">
@@ -40,9 +38,6 @@
                                             Tên Job: {{$job->name}}
                                         </li>
                                         <li class="mt-list-item">
-                                            Tên khách hàng: {{$job->client}}
-                                        </li>
-                                        <li class="mt-list-item">
                                             Số lượng ảnh: {{$job->total}}
                                         </li>
                                         <li class="mt-list-item">
@@ -56,12 +51,6 @@
                                         </li>
                                         <li class="mt-list-item">
                                             Chú thích: {{$job->note}}
-                                        </li>
-                                        <li class="mt-list-item">
-
-                                            <a href="{{route('delete-job',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Xóa </a>
-                                            <a href="{{route('get-edit-job',['id'=>$job->id])}}" class="btn btn-outline btn-circle dark btn-sm black">Sửa </a>
-                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Up</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -83,10 +72,6 @@
                                         </li>
                                         <li class="mt-list-item">
                                             Ghi chú: {{$job->order->note}}
-                                        </li>
-                                        <li class="mt-list-item">
-                                            <a href="{{route('delete-order',$job->order->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Xóa Order</a>
-                                            <a href="{{route('get-edit-order',$job->order->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Sửa Order</a>
                                         </li>
                                     </ul>
                                     @endif

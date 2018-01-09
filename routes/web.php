@@ -96,3 +96,18 @@ Route::get('/editor',[
     'uses' => 'JobEditController@index'
 ]);
 
+Route::get('/editor/job/get',[
+    'as' => 'get-job',
+    'uses' => 'JobEditController@getJob'
+]);
+
+Route::get('/editor/job/finish/{id}',[
+    'as' => 'finish-job',
+    'uses' => 'JobEditController@finishJob'
+]);
+
+Route::get('/editor/job/detail/{id}',[
+    'as' => 'editor-job-detail',
+    'uses' => 'JobEditController@show'
+]);
+
