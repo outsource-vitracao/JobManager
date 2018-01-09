@@ -111,3 +111,29 @@ Route::get('/editor/job/detail/{id}',[
     'uses' => 'JobEditController@show'
 ]);
 
+//QA
+Route::get('/QA',[
+    'as' => 'QA-index',
+    'uses' => 'JobCheckController@index'
+]);
+
+Route::get('/QA/working',[
+    'as' => 'QA-working',
+    'uses' => 'JobCheckController@working'
+]);
+
+Route::get('/QA/job/get/{id}',[
+    'as' => 'get-edited-job',
+    'uses' => 'JobCheckController@getJob'
+]);
+
+Route::get('/QA/job/detail/{id}',[
+    'as' => 'QA-job-detail',
+    'uses' => 'JobCheckController@show'
+]);
+
+Route::get('/QA/job/finish/{id}',[
+    'as' => 'finish-edited-job',
+    'uses' => 'JobCheckController@finishJob'
+]);
+

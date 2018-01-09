@@ -21,8 +21,13 @@
             </li>
             <!-- END SIDEBAR TOGGLER BUTTON -->
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('QA-index')}}" class="nav-link">
                     <span class="title">Danh sách Job</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('QA-working')}}" class="nav-link">
+                    <span class="title">Danh sách Job đang kiểm tra</span>
                 </a>
             </li>
         </ul>

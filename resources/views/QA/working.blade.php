@@ -40,7 +40,7 @@
                                 </td>
                                 <td> <span class="label label-sm label-info">{{$job->status->status}}</span> </td>
                                 <td> 
-                                    <a href="{{route('get-edited-job',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Kiểm tra</a>
+                                    <a href="{{route('QA-job-detail',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Chi tiết</a>
                                 </td>
                             </tr>
                             @endforeach
@@ -49,7 +49,7 @@
                 </div>
             </div>
             @else
-                <h4>Hiện tại chưa có job để kiểm tra</h4>
+                <h4>Bạn chưa nhận job nào để kiểm tra</h4>
             @endif
         </div>
         <!-- END BORDERED TABLE PORTLET-->

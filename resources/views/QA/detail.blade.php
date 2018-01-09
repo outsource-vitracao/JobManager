@@ -10,7 +10,7 @@
                     <span class="caption-subject font-purple-soft bold uppercase">Thông tin chi tiết Job</span>
                 </div>
                 <div class="actions">
-                    <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Hoàn thành</a>
+                    <a href="{{route('finish-edited-job',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Kiểm tra xong</a>
                 </div>
             </div>
             <div class="portlet-body">
