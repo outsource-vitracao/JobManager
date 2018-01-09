@@ -10,8 +10,12 @@
                     <span class="caption-subject font-purple-soft bold uppercase">Thông tin chi tiết Job</span>
                 </div>
                 <div class="actions">
+                    @if($job->status->status == "Chờ thêm vào hàng đợi")
                     <a href="{{route('add-queue',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Thêm vào hàng đợi</a>
+                    @endif
+                    @if($job->status->status == "Trong hàng đợi")
                     <a href="{{route('prioritize-queue',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Ưu tiên</a>
+                    @endif
                     <a href="{{route('get-create-order',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Thêm order</a>
                 </div>
             </div>
@@ -61,7 +65,9 @@
 
                                             <a href="{{route('delete-job',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Xóa </a>
                                             <a href="{{route('get-edit-job',['id'=>$job->id])}}" class="btn btn-outline btn-circle dark btn-sm black">Sửa </a>
-                                            <a href="#" class="btn btn-outline btn-circle dark btn-sm black">Up</a>
+                                            @if($job->status->status == "Kiểm tra xong")
+                                            <a href="{{route('up-job',$job->id)}}" class="btn btn-outline btn-circle dark btn-sm black">Up</a>
+                                            @endif
                                         </li>
                                     </ul>
                                 </div>

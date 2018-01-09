@@ -89,6 +89,12 @@ Route::get('/manager/job/prioritize-queue/{id}',[
     'uses' => 'JobController@prioritizeQueue'
 ]);
 
+Route::get('/manager/job/up/{id}',[
+    'as' => 'up-job',
+    'uses' => 'JobController@upJob'
+]);
+
+
 
 //Editor
 Route::get('/editor',[

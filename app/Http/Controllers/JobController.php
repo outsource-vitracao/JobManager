@@ -85,5 +85,12 @@ class JobController extends Controller
 
     }
 
-    
+    public function upJob($id){
+
+        $jobStatus = Job::find($id)->status;
+        $jobStatus->status = "Đã up";
+        $jobStatus->save();
+
+        return redirect()->back();
+    }
 }
